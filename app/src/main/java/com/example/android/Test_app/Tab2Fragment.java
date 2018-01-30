@@ -27,7 +27,8 @@ public class Tab2Fragment extends Fragment {
     private static ListView list;
 
     public static void buttonClick(View view) {
-
+        
+        //Получение данных из json и создание списка на их основе
         JsonHelper helper = new JsonHelper();
         shopList = helper.dataFromJson(view.getContext());
 
@@ -54,7 +55,8 @@ public class Tab2Fragment extends Fragment {
         View view = inflater.inflate(R.layout.tab2_fragment, container, false);
 
         list = view.findViewById(R.id.list);
-
+        
+        //Элегантное создание списка "по умолчанию"
         ArrayList<String> mounts = new ArrayList<>();
         mounts.add("Январь");
         mounts.add("Февраль");
