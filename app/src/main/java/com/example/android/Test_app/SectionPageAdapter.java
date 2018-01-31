@@ -11,7 +11,7 @@ import java.util.List;
  * Created by Evasin on 23.01.2018.
  */
 
-//Получение позиций фрагментов
+//Getting the positions of fragments
 public class SectionPageAdapter extends FragmentPagerAdapter {
 
     private final List<Fragment> mFragmentList = new ArrayList<>();
