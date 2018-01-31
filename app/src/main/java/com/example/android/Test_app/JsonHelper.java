@@ -24,7 +24,7 @@ public class JsonHelper extends Fragment {
         return i;
     }
 
-    //Подключение json файл
+    //Connecting json file
     public String loadJSONFromAsset(Context context) {
         String json = null;
         try {
@@ -41,7 +41,7 @@ public class JsonHelper extends Fragment {
         return json;
     }
 
-    //выводим данные из json в список
+    //output data from json to the list
     public ArrayList<HashMap<String, String>> dataFromJson(Context context) {
 
         String jsonStr = loadJSONFromAsset(context);
