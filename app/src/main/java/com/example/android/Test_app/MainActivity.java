@@ -22,27 +22,27 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
         setContentView(R.layout.activity_main);
         Log.d(TAG, "onCreate: Starting");
 
-        //Анимация refresh
+        //Animation refresh
         mSwipeLayout = findViewById(R.id.swipe);
         mSwipeLayout.setOnRefreshListener(this);
 
         mSectionPageAdapter = new SectionPageAdapter(getSupportFragmentManager());
 
-        //Создание ViewPager
+        //Create ViewPager
         mViewPager = findViewById(R.id.container);
         setupViewPager(mViewPager);
 
-        //Создание вкладок с помощью ViewPager
+        //Create tabs with ViewPager
         TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
-        //Смена цвета текста на вкладках
+        //Change color of tab's titles
         tabLayout.setSelectedTabIndicatorColor(Color.parseColor("#FF0000"));
         tabLayout.setSelectedTabIndicatorHeight((int) (5 * getResources().getDisplayMetrics().density));
         tabLayout.setTabTextColors(Color.parseColor("#FF0000"), Color.parseColor("#FF0000"));
     }
 
-    //Добавление вкладок и назначение заголовков
+    //Adding Tabs and Assigning titles
     private void setupViewPager(ViewPager viewPager) {
         SectionPageAdapter adapter = new SectionPageAdapter(getSupportFragmentManager());
         adapter.addFragment(new Tab1Fragment(), "ВКЛАДКА 1");
