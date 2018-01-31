@@ -24,7 +24,7 @@ public class Tab1Fragment extends Fragment {
         View view = inflater.inflate(R.layout.tab1_fragment, container, false);
         btnTEST = view.findViewById(R.id.btnTEST);
 
-        //Listener кнопки для загрузки справочника
+        //Listener button for loading the directory
         btnTEST.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
