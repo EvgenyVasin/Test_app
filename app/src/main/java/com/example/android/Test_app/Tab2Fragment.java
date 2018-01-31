@@ -28,7 +28,7 @@ public class Tab2Fragment extends Fragment {
 
     public static void buttonClick(View view) {
         
-        //Получение данных из json и создание списка на их основе
+        //Getting data from json and creating a list based on them
         JsonHelper helper = new JsonHelper();
         shopList = helper.dataFromJson(view.getContext());
 
@@ -40,7 +40,7 @@ public class Tab2Fragment extends Fragment {
 
         list.setAdapter(adapter);
 
-        //Создание Toast при клике на элементы списка
+        //Creating Toast when clicking on list items
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -56,7 +56,7 @@ public class Tab2Fragment extends Fragment {
 
         list = view.findViewById(R.id.list);
         
-        //Элегантное создание списка "по умолчанию"
+        //Elegant creation of the "default" list :)
         ArrayList<String> mounts = new ArrayList<>();
         mounts.add("Январь");
         mounts.add("Февраль");
